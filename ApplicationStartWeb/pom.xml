@@ -9,27 +9,25 @@
   </parent>
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>ApplicationWeb</artifactId>
-
+  <artifactId>ApplicationStartWeb</artifactId>
   <dependencies>
+    <dependency>
+      <groupId>com.zhangblue</groupId>
+      <artifactId>ElasticSearchSpringBootStarter</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.zhangblue</groupId>
+      <artifactId>KafkaSpringBootStarter</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
+
     <!--导入spring-boot-web模块-->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
       <!--不使用logback-->
-      <exclusions>
-        <exclusion>
-          <artifactId>spring-boot-starter-logging</artifactId>
-          <groupId>org.springframework.boot</groupId>
-        </exclusion>
-      </exclusions>
-
-    </dependency>
-
-    <!--使用log4j 目前还不知道怎么用相对路径 写文件-->
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-log4j2</artifactId>
     </dependency>
 
     <!--spring-boot test模块-->
@@ -45,18 +43,6 @@
       <optional>true</optional>
     </dependency>
 
-    <!--es 模块导入-->
-    <dependency>
-      <groupId>com.zhangblue</groupId>
-      <artifactId>ElasticSearchModule</artifactId>
-    </dependency>
-
-    <!--hadoop 模块导入-->
-    <dependency>
-      <groupId>com.zhangblue</groupId>
-      <artifactId>HadoopModule</artifactId>
-    </dependency>
-
   </dependencies>
 
   <!--spring-boot打包插件-->
@@ -68,5 +54,6 @@
       </plugin>
     </plugins>
   </build>
+
 
 </project>

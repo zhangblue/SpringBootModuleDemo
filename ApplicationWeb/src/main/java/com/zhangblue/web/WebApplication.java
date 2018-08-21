@@ -1,4 +1,4 @@
-package com.zhangblue;
+package com.zhangblue.web;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

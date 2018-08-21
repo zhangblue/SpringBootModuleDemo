@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://172.16.36.134:5432/zhangdi_test
+    username: bangcle_pg
+    password:
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      # 更新或创建数据表
+      ddl-auto: update
+    # 控制台显示sql
+    show-sql: true
+  redis:
+    host: 172.16.36.134

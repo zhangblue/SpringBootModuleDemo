@@ -1,6 +1,8 @@
 package com.zhangblue;
 
 import com.zhangblue.elasticsearch.repository.ElasticSearchRepository;
+import com.zhangblue.hadoop.repository.HadoopRepository;
+import com.zhangblue.web.WebApplication;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,10 +15,17 @@ public class WebApplicationTests {
 
   @Autowired
   ElasticSearchRepository elasticSearchRepository;
+  @Autowired
+  HadoopRepository hadoopRepository;
 
   @Test
-  public void test(){
+  public void testElasticSearch() {
     System.out.println(elasticSearchRepository.clustorAdministration());
   }
 
+
+  @Test
+  public void testHadoop() {
+    System.out.println(hadoopRepository.getConfiguration().get("fs.defaultFS"));
+  }
 }

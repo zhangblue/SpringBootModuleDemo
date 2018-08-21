@@ -1,0 +1,9 @@
+bangcle.elasticsearch:
+  cluster-name: bangcle_es
+  transport-host-names: ["172.16.36.134"]
+  type: bangcle_type
+  port: 9300
+  bulk-actions: 1000
+  bulk-byte-size-value-as-m-b: 5
+  bulk-concurrent-requests: 3
+  bulk-flush-seconds: 10

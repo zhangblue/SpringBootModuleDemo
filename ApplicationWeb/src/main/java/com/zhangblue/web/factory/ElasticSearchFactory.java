@@ -1,7 +1,8 @@
-package com.zhangblue.factory;
+package com.zhangblue.web.factory;
 
 import com.zhangblue.elasticsearch.repository.ElasticSearchRepository;
-import com.zhangblue.factory.config.ElasticSearchConfig;
+import com.zhangblue.web.factory.config.ElasticSearchConfig;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
@@ -9,6 +10,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @EnableConfigurationProperties(ElasticSearchConfig.class)
+@ConditionalOnClass({ElasticSearchRepository.class, ElasticSearchConfig.class})
 public class ElasticSearchFactory {
 
   private final ElasticSearchConfig elasticSearchConfig;
@@ -20,9 +22,7 @@ public class ElasticSearchFactory {
   @Bean
   @ConditionalOnMissingBean(ElasticSearchRepository.class)
   public ElasticSearchRepository elasticSearchRepository() throws Exception {
-
     ElasticSearchRepository elasticSearchRepository = new ElasticSearchRepository();
-
     elasticSearchRepository.setClientHosts(elasticSearchConfig.getTransportHostNames());
     elasticSearchRepository.setClusterName(elasticSearchConfig.getClusterName());
     elasticSearchRepository.setPort(elasticSearchConfig.getPort());

@@ -41,7 +41,7 @@ public class ElasticSearchRepository {
   @Override
   public String toString() {
     return "ElasticSearchRepository{" +
-        ", strType='" + strType + '\'' +
+        "  strType='" + strType + '\'' +
         ", clusterName='" + clusterName + '\'' +
         ", clientHosts=" + clientHosts +
         ", port=" + port +
@@ -114,6 +114,8 @@ public class ElasticSearchRepository {
     ClusterStatus clusterStatus = new ClusterStatus(clusterName, dataNodeNum, nodeNum, listIndex);
     return JSON.toJSONString(clusterStatus);
   }
+
+
 
 
   public TransportClient getClient() {

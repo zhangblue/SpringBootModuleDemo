@@ -1,4 +1,4 @@
-package com.zhangblue.controller;
+package com.zhangblue.web.controller;
 
 import com.zhangblue.elasticsearch.repository.ElasticSearchRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +13,6 @@ public class ElasticsearchController {
 
   @RequestMapping("/index")
   public String getAllIndex() {
-
     String result = elasticSearchRepository.clustorAdministration();
     return result;
   }
