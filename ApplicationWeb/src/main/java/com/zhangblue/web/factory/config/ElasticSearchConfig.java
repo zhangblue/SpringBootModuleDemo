@@ -3,7 +3,7 @@ package com.zhangblue.web.factory.config;
 import java.util.List;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
-@ConfigurationProperties(prefix = "bangcle.elasticsearch")
+@ConfigurationProperties(prefix = "com.zhangblue.elasticsearch")
 public class ElasticSearchConfig {
 
   private String clusterName;

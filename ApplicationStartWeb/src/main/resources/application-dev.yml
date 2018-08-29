@@ -1,9 +1,9 @@
 com:
   zhangblue:
     elasticsearch:
-      cluster-name: bangcle_es
+      cluster-name: zhangblue_es
       client-hosts: ["172.16.31.99"]
-      type: bangcle_type
+      type: zhangblue_type
       port: 9300
       bulk-actions: 1000
       bulk-byte-size-value-as-m-b: 5
