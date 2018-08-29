@@ -2,7 +2,7 @@ package com.zhangblue.web.factory.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
-@ConfigurationProperties(prefix = "bangcle.hadoop")
+@ConfigurationProperties(prefix = "com.zhangblue.hadoop")
 public class HadoopConfig {
 
   private String coreSite;

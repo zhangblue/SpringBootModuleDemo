@@ -1,14 +1,15 @@
-bangcle:
-  hadoop:
-    core-site: /Users/zhangdi/test_folder/hadoop-cdh-config/99/hbase-conf/core-site99.xml
-    hbase-site: /Users/zhangdi/test_folder/hadoop-cdh-config/99/hbase-conf/hbase-site99.xml
-    hdfs-site: /Users/zhangdi/test_folder/hadoop-cdh-config/99/hbase-conf/hdfs-site99.xml
-  elasticsearch:
-    cluster-name: bangcle_es
-    transport-host-names: ["172.16.31.99"]
-    type: bangcle_type
-    port: 9300
-    bulk-actions: 1000
-    bulk-byte-size-value-as-m-b: 5
-    bulk-concurrent-requests: 3
-    bulk-flush-seconds: 10
+com:
+  zhangblue:
+    hadoop:
+      core-site: /Users/zhangdi/test_folder/hadoop-cdh-config/99/hbase-conf/core-site99.xml
+      hbase-site: /Users/zhangdi/test_folder/hadoop-cdh-config/99/hbase-conf/hbase-site99.xml
+      hdfs-site: /Users/zhangdi/test_folder/hadoop-cdh-config/99/hbase-conf/hdfs-site99.xml
+    elasticsearch:
+      cluster-name: zhangblue_es
+      transport-host-names: ["172.16.18.240"]
+      type: zhangblue_type
+      port: 9300
+      bulk-actions: 1000
+      bulk-byte-size-value-as-m-b: 5
+      bulk-concurrent-requests: 3
+      bulk-flush-seconds: 10

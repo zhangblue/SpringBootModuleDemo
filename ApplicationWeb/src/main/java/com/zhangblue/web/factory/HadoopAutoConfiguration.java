@@ -22,7 +22,7 @@ public class HadoopAutoConfiguration {
   }
 
   @Bean
-  @ConditionalOnProperty(prefix = "bangcle.hadoop", name = {"hbase-site", "core-site", "hdfs-site"}, matchIfMissing = false)
+  @ConditionalOnProperty(prefix = "com.zhangblue.hadoop", name = {"hbase-site", "core-site", "hdfs-site"}, matchIfMissing = false)
   public HadoopRepository getHadoopRepository() {
     System.out.println("---------------------");
     System.out.println(hadoopConfig.getCoreSite());
